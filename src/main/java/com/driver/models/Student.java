@@ -21,9 +21,55 @@ public class Student {
 
     private String country;
 
+    public Card getCard() {
+        return card;
+    }
+
+    public void setCard(Card card) {
+        this.card = card;
+    }
+
     public Student() {
     }
 
+    public Student(String emailId, String name, int age, String country) {
+        this.emailId = emailId;
+        this.name = name;
+        this.age = age;
+        this.country = country;
+    }
+
+    public String getEmailId() {
+        return emailId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setEmailId(String emailId) {
+        this.emailId = emailId;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
     // alter table student add foreign key constraint card references Card(id)
 
     @OneToOne

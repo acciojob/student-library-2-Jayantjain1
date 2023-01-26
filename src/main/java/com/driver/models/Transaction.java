@@ -21,6 +21,54 @@ public class Transaction {
     @JsonIgnoreProperties("books")
     private Card card;
 
+    public void setCard(Card card) {
+        this.card = card;
+    }
+
+    public void setBook(Book book) {
+        this.book = book;
+    }
+
+    public void setFineAmount(int fineAmount) {
+        this.fineAmount = fineAmount;
+    }
+
+    public void setIssueOperation(boolean issueOperation) {
+        isIssueOperation = issueOperation;
+    }
+
+    public void setTransactionStatus(TransactionStatus transactionStatus) {
+        this.transactionStatus = transactionStatus;
+    }
+
+    public Card getCard() {
+        return card;
+    }
+
+    public Book getBook() {
+        return book;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public int getFineAmount() {
+        return fineAmount;
+    }
+
+    public boolean isIssueOperation() {
+        return isIssueOperation;
+    }
+
+    public TransactionStatus getTransactionStatus() {
+        return transactionStatus;
+    }
+
     @ManyToOne
     @JoinColumn
     @JsonIgnoreProperties("transactions")
@@ -36,5 +84,13 @@ public class Transaction {
 
     @CreationTimestamp
     private Date transactionDate;
+
+    public Date getTransactionDate() {
+        return transactionDate;
+    }
+
+    public void setTransactionDate(Date transactionDate) {
+        this.transactionDate = transactionDate;
+    }
 }
 

@@ -25,6 +25,22 @@ public class Card {
     @UpdateTimestamp
     private Date updatedOn;
 
+    public CardStatus getCardStatus() {
+        return cardStatus;
+    }
+
+    public void setCardStatus(CardStatus cardStatus) {
+        this.cardStatus = cardStatus;
+    }
+
+    public void setBooks(List<Book> books) {
+        this.books = books;
+    }
+
+    public List<Book> getBooks() {
+        return books;
+    }
+
     @Enumerated(value = EnumType.STRING)
     private CardStatus cardStatus;
 
