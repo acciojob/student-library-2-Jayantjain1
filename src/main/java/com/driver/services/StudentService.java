@@ -18,15 +18,15 @@ public class StudentService {
     StudentRepository studentRepository4;
 
     public Student getDetailsByEmail(String email){
-        Student student = null;
-        student = studentRepository4.findByEmailId(email);
-        return student;
+//        Student student = null;
+        return studentRepository4.findByEmailId(email);
+//        return student;
     }
 
     public Student getDetailsById(int id){
-        Student student = null;
-        student = studentRepository4.findById(id).get();
-        return student;
+//        Student student = null;
+        return studentRepository4.findById(id).get();
+//        return student;
     }
 
     public void createStudent(Student student){
