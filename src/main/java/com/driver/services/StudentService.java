@@ -12,7 +12,7 @@ public class StudentService {
 
 
     @Autowired
-    CardService cardService4;
+    CardService cardService;
 
     @Autowired
     StudentRepository studentRepository4;
@@ -30,11 +30,13 @@ public class StudentService {
     }
 
     public void createStudent(Student student){
-        studentRepository4.save(student);
+//        studentRepository4.save(student);
+        Card newCard = cardService.createAndReturn(student);
     }
 
     public void updateStudent(Student student){
-        studentRepository4.save(student);
+//        studentRepository4.save(student);
+        studentRepository4.updateStudentDetails(student);
     }
 
     public void deleteStudent(int id){
