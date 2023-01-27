@@ -26,7 +26,14 @@ public class BookService {
 //        author.setBooksWritten(bookList);
 //        book.setAuthor(author);
 //        authorRepository.save(author);
-        bookRepository.save(book);
+        int id = book.getAuthor().getId();
+        Author author = authorRepository.findById(id).get();
+        List<Book> currentListOfBooks = author.getBooksWritten();
+        currentListOfBooks.add(book);
+        author.setBooksWritten(currentListOfBooks);
+        book.setAuthor(author);
+        authorRepository.save(author);
+//        bookRepository.save(book);
     }
 
     public List<Book> getBooks(String genre, boolean available, String author){
