@@ -36,7 +36,6 @@ public class StudentController {
         return new ResponseEntity<>("Student details printed successfully ", HttpStatus.OK);
     }
     @GetMapping("get-student-by-id")
-    //Add required annotations
     public ResponseEntity getStudentById(@RequestParam("id") int id){
         studentService.getDetailsById(id);
         return new ResponseEntity<>("Student details printed successfully ", HttpStatus.OK);
