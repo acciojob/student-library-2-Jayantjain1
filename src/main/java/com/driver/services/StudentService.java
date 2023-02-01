@@ -35,7 +35,7 @@ public class StudentService {
     }
 
     public void deleteStudent(int id){
-        Student student = studentRepository4.findById(id).get();
-        studentRepository4.delete(student);
+        cardService.deactivateCard(id);
+        studentRepository4.deleteCustom(id);
     }
 }
